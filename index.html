@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1><span class="destaque">Minhas Tarefas</span></h1>
+
+  <form id="form-tarefa">
+    <input type="text" id="titulo" placeholder="Digite a tarefa" required />
+  <div class="campo">
+    <label for="categoria"><i class="fas fa-tag"></i> Categoria</label>
+    <select id="categoria">
+      <option value="Estudo">Estudo</option>
+      <option value="Trabalho">Trabalho</option>
+      <option value="Pessoal">Pessoal</option>
+    </select>
+  </div>
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <section id="filtros">
+    <button data-cat="Todos">Todos</button>
+    <button data-cat="Estudo">Estudo</button>
+    <button data-cat="Trabalho">Trabalho</button>
+    <button data-cat="Pessoal">Pessoal</button>
+  </section>
+
+  <ul id="lista-tarefas"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

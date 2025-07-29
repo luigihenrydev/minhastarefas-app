@@ -1,0 +1,159 @@
+:root {
+  --bg: #121212;
+  --bg-card: #1e1e1e;
+  --roxo: #531bb3;
+  --roxo-claro: #a78bfa;
+  --texto: #f1f1f1;
+  --texto-fraco: #aaaaaa;
+  --verde: #22c55e;
+  --vermelho: #ef4444;
+  --cinza-hover: #2a2a2a;
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--roxo);
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h1 .destaque {
+  background: linear-gradient(90deg, var(--roxo-claro), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input, select, button {
+  padding: 8px 30px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+input, select {
+  background: var(--bg-card);
+  color: var(--texto);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--texto);
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+button {
+  background: linear-gradient(90deg, var(--roxo-claro), #403f3f);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+  transition: all 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+button:hover {
+  background: linear-gradient(90deg, var(--roxo-claro), #948b8b);
+}
+
+#filtros {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#filtros button {
+  background: #333;
+  color: var(--texto);
+}
+
+#filtros button.ativo {
+  background: linear-gradient(90deg, var(--roxo-claro), #ffffff);
+  color: #382364;
+  font-weight: bold;
+}
+
+#filtros button:hover {
+  background: linear-gradient(90deg, var(--roxo-claro), #403f3f);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+li {
+  background: var(--bg-card);
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+li:hover {
+  background: linear-gradient(90deg, var(--roxo-claro), #403f3f);
+  cursor: grab;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--texto-fraco);
+}
+
+li button {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+li button:first-child {
+  color: var(--verde);
+}
+
+li button:last-child {
+  color: var(--vermelho);
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
