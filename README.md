@@ -1,5 +1,7 @@
 # 📝 Minhas Tarefas - JS
 
+![Prévia do Projeto](./print.png)
+
 Um pequeno projeto de lista de tarefas criado com **HTML**, **CSS** e **JavaScript**, com o objetivo de praticar e reforçar conhecimentos em **Desenvolvimento Web**.
 
 ## 🚀 Funcionalidades
